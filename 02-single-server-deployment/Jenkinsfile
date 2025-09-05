@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                sh "pip install -r {pathfolder}requirements.txt"
+                sh "pip install -r ${pathfolder}requirements.txt"
             }
         }
         stage('Test') {
@@ -19,7 +19,7 @@ pipeline {
 
         stage('Package code') {
             steps {
-                sh "zip -r {pathfolder}myapp.zip ./* -x '*.git*'"
+                sh "zip -r ${pathfolder}myapp.zip ./* -x '*.git*'"
                 sh "ls -lart"
             }
         }
