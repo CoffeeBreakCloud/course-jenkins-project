@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SERVER_IP = credentials('prod-server-ip')
-        pathfolder = './02-single-server-deployment'
+        pathfolder = './02-single-server-deployment/'
     }
     stages {
         stage('Setup') {
